@@ -1,0 +1,75 @@
+//作为第一次上传的简易代码
+#include<stdio.h>
+int Max(int x,int y)
+{
+    if(x>y)
+    return x；
+    else 
+    return y;
+    }
+int main()
+{
+    int a,b,c;
+    scanf("%d\n",a);
+    b=((a*100)^99)/(a^99);
+    c=Max(a,b);
+    printf("The unmber is %d\n",c);
+    return0;
+}
+
+////计算字节大小
+//int main()
+//{
+//	char ch='w';
+//	char* pc=&ch;
+//	printf("%c\n",sizeof(pc));
+//	return 0;
+//}
+
+
+
+
+//int main()
+//{
+//	char ch='w';
+//	char* pc=&ch;
+//	*pc='a';
+//	printf("%c\n",ch);
+//	return 0;
+//}
+//此处是将ch放在一个地址pc中，利用*pc将地址中的数变为a
+
+
+
+
+//此处为指针
+//int main()
+//{
+//	int a=10;
+//	int* p=%a;
+//	*p=20;
+//	return 0;
+//}
+
+
+
+
+
+//static 用于此处，a为静态可变的数值
+//void Tes()
+//{
+//	static int a=1；
+//    printf("a=%d\n",a);
+//	a++;
+//}
+//
+//int main()
+//{
+//	int i=1;
+//
+//	while(i<5)
+//{	Tes();
+//	i++;
+//	
+//}
+//    return 0;
