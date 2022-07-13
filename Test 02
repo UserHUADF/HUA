@@ -1,0 +1,101 @@
+#include<stdio.h>
+
+//switch  在此处可以嵌套使用
+int main()
+{
+	int n=1;
+	int m=2;
+	switch(n)
+	{
+	case 1:m++;
+	case 2:n++;
+	case 3:
+		switch(n)
+		{
+		case 1:n++;
+		case 2:m++,n++;
+		break;
+		}
+	case 4:m++;
+	break;
+	
+		break;
+	}
+	printf("m = %d,n = %d\n",m,n);
+		return 0;
+}
+
+
+
+
+
+//while循环  包含循环与break continue
+//while()语句成立则继续循环直到不成立
+//可以利用break提前结束循环 如if（i == 5）break；则只会输出1 2 3 4
+int main()
+{
+	int i=1;
+	while(i<=10)
+	{
+		printf("%d ",i);
+		i++;
+	}
+	return 0;
+}
+
+
+//continue会直接终止本次循环中continue后面的代码（不执行） 直接进入下一循环
+//如果在循环语句前 用continue则会死循环 
+int main()
+{
+	int i=1;
+	while(i<=10)
+	{
+		if(i == 5)
+			continue;
+		printf("%d ",i);
+		i++;
+	}
+	return 0;
+}
+//只输出 1 2 3 4 但循环未结束
+
+
+
+
+
+//putchar 与 getchar
+//getchar获取字符   putchar与printf类似 
+//循环遇到ctrl+z结束
+//EOF-end of file -> -1
+int main()
+{
+	int ch=0;
+	while((ch=getchar()) !=EOF)
+		putchar(ch);
+	return 0;
+}
+
+
+// 应用场景：
+int main()
+{
+	int ret=0;
+	char password[20]={0};
+	printf("请输入密码:>");
+	scanf("%s",password);//输入密码 放在password中
+	//缓冲区还剩下一个'\n'
+	//需要读取'\n' 此处加上一个getchar（）；
+	getchar();
+	printf("请确认(Y/N):>");
+	ret=getchar();//Y/N
+	if(ret == 'Y')
+	{
+		printf("确认成功\n");
+	}
+	else
+	{
+		printf("放弃确认\n");
+	}
+	return 0;
+}
