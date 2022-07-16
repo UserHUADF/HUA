@@ -1,3 +1,173 @@
 #include<stdio.h>
 
+//以Test02中getchar部分为延续
+//putchar 与 getchar
+//getchar获取字符 putchar与printf类似 
+//遇到ctrl+z结束
+//EOF-end of file -> -1
+//int main()
+//{
+//	int ch=0;
+//	while((ch=getchar()) !=EOF)
+//		putchar(ch);
+//	return 0;
+//}
 
+// 应用场景：
+int main()
+{
+	int ret=0;
+	char password[20]={0};
+	printf("请输入密码:>");
+	scanf("%s",password);//输入密码 放在password中
+	//缓冲区还剩下一个'\n'
+	//需要读取'\n' 此处加上一个getchar（）；
+	getchar();
+	printf("请确认(Y/N):>");
+	ret=getchar();//Y/N
+	if(ret == 'Y')
+	{
+		printf("确认成功\n");
+	}
+	else
+	{
+		printf("放弃确认\n");
+	}
+	return 0;
+}
+
+//特殊应用如：
+int main()
+{
+	int ch=0;
+	while((ch=getchar())!=EOF)
+	{
+		if(ch<'0'|| ch>'9')
+           continue;
+	putchar(ch);
+	}
+    return 0;
+}
+//只会输出数字字符 其他均不会输出
+
+
+
+
+//for循环
+//for（1;2;3) 1为初始化部分 2 为条件判断部分 3为调整部分
+//应用如：用for循环 打出1-10的数字
+int main()
+{
+	int i=0;
+	for(i=1;i<=10;i++)
+	{
+		printf("%d",i);
+	}
+	return 0;
+}
+
+//break 与 continue 在for循环中的应用
+int main()
+{
+	int i=0;
+	for(i=1;i<=10;i++)
+	{
+		if(i == 5)
+			break;
+		printf("%d",i);
+	}
+	return 0;
+}
+//只会输出1234
+
+int main()
+{
+	int i=0;
+	for(i=1;i<=10;i++)
+	{
+		if(i == 5)
+			continue;
+		printf("%d",i);
+	}
+	return 0;
+}
+//输出1234678910
+
+此处如果用while循环会遇到死循环问题如
+while(i<=10)
+{
+if(i==5)
+continue;/*此处会因为跳过调整阶段"i++" 直接进入判断阶段while(i<=10)进入死循环*/
+printf("%d",i)
+i++;
+}
+
+//在for循环体内改变变量会导致for循环失去控制
+//如
+int main()
+{
+	int i=1;
+	for(i=0;i<=10;i++)
+	{
+		if(i=5)/*此处i=5不是判断 而是赋值 直接将i的值赋为5*/
+			printf("shabi");
+	}
+	return0;
+}
+
+
+
+
+//此处为数组
+int main()
+{
+	int arr[10]={1,2,3,4,5,6,7,8,9,10};
+	int i=0;
+	for(i=0;i<10;i++)/* 建议区间使用前闭后开的形式 此处即0-9的区间循环 10次循环 10次打印等*/
+	{
+		printf("%d",arr[i]);
+	}
+	return 0;
+}
+
+int main()
+{
+	int i=0;
+	int j=0;
+
+	for(i=0;i<10;i++)
+	{
+		for(j=0;j<10;j++)
+		{
+			printf("hehe\n");
+		}
+		
+	}
+}
+//此处输出100个“hehe” 
+
+//如果将for循环语句中的初始化语句省略 会出现以下的问题
+int main()
+{
+	int i=0;
+	int j=0;
+
+	for(;i<10;i++)
+	{
+		for(;j<10;j++)/*在此循环中一次循环结束后j的值为10，导致下一次循环直接结束*/
+		{
+			printf("hehe\n");
+		}
+		}
+}
+//此处只会输出10个“hehe”
+
+//for循环第二种应用
+ int main()
+ {
+	 int i=0;
+	 int k=0;
+	 for(i=0,k=0;k=0;i++,k++)/*此处判断语句有问题 k=0不是判断语句 是赋值语句 k=0为假故直接结束循环，循环0次*/
+		 k++;
+	 return 0;
+ }
