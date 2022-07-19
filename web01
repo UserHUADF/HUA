@@ -1,0 +1,99 @@
+HTML
+Hyper Text Markup Language
+超文本标记语言
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>  表示此处为utf-8编码格式 meta为文档属性
+		<title>Test001</title>
+	</head>
+	<body>
+		<h1>几种信息查询网站</h1>
+		<hr >
+		<ol>
+			<li><a href="https://www.baidu.com/">百度搜索</li>
+			<img src="img/01.jfif" width="100px" height="50">
+			<li><a href="https://cn.bing.com/?mkt=zh-CN">微软必应</li>
+			<li><a href="https://www.cnki.net/">中国知网</li>
+			<li><a href="https://www.baidu.com/">百度搜索</li>
+			
+			
+			
+			
+		</ol>
+		
+	</body>
+</html>
+
+标题至多只有<h6>    </h6>
+
+引用图片：
+<img src="地址" height="***px或者***%" width="***px或者***%" >
+（height为高度 width为宽度 px为像素 %为占屏幕百分比）
+
+超链接：
+<a href="地址">    </a>
+
+代码缩进使用Tab键
+
+<i>    </i>斜体
+<p>    </p> 单独占一行
+<br> 为单标签 强制换行
+<b>    </b>加粗
+&nbsp 一个空格 代码中空格“ ”不论多少都只会识别为一个空格
+
+列表：有序列表<ol>/无序列表<ul>
+		<!无序列表的三种格式>
+		<ul type="disc"> <!实心圆>
+			<li> 今天周几？</li>
+			<li>今天周二！</li>
+		</ul>
+		<ul type="circle"> <!空心圆>
+			<li> 今天周几？</li>
+			<li>今天周二！</li>
+		</ul>
+		<ul type="square"> <!实心方块>
+			<li> 今天周几？</li>
+			<li>今天周二！</li>
+		</ul>
+		
+		<!有序列表的三种格式>
+		<ol type="1"> <!数字排序>
+			<li>北冥有鱼</li>
+			<li>其名为鲲</li>
+			<li>鲲之大</li>
+			<li>需要两个烧烤架</li>
+		</ol>
+		<ol type="a"> <!a和A时都为字母排序>
+			<li>北冥有鱼</li>
+			<li>其名为鲲</li>
+			<li>鲲之大</li>
+			<li>需要两个烧烤架</li>
+		</ol>
+		<ol type="i"> <!i和I时都为罗马数字排序>
+			<li>北冥有鱼</li>
+			<li>其名为鲲</li>
+			<li>鲲之大</li>
+			<li>需要两个烧烤架</li>
+		</ol>
+    
+    	<!使用图片时 有title和alt这两个 title表示鼠标划上去时显示的文字 alt表示图片加载失败后显示的文字>
+		<img src="img/01.jfif" height="50px" width="50px" title="oh!!!!!!" alt="yeah!!!!!!!!!">
+		
+    <!几种不太常见的代码>
+		<!del给文字加上删除线>
+		<P><del>我爱你</del></p>
+		
+		<!sup给文字加上把文字变成上标>
+		<p>10<sup>20</sup></p>
+		
+		<!u给文字加上下划线>
+		<p><u>我不爱你</u></p>
+		
+		<!center把文字居中显示>
+		<p><center>我爱你！！</center></p>
+		
+		
