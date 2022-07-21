@@ -1,0 +1,157 @@
+利用代码绘制表格
+认识标签：
+在代码中表格用以下标签表示：
+<table>
+     <tr>表示一行
+     <td></td> <td></td>表示一行中的一个单元格
+     </tr>
+     <tr>
+     </tr>
+     .......
+</table>
+<!以上就是一个标准的表格>
+<!边框border="">
+<!单元格间隙cellspacing="">
+
+ 以下为一个标准单元格的代码
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>前端技术阶段划分标准</h3>
+		<table border="1px" cellspacing=0"">
+			<tr>
+				<td></td>
+				<td>初级</td>
+				<td>中级</td>
+				<td>高级</td>
+				<td>专家</td>
+				<td>？？？</td>
+			</tr>
+			<tr>
+				<td>标准</td>
+				<td>0000000</td>
+				<td>1111111</td>
+				<td>2222222</td>
+				<td>3333333</td>
+			</tr>
+			<tr>
+				<td>TRAME01</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>TRAME02</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>
+
+
+
+
+<!以下为一个表格的改造>
+改变一个表格的宽度
+1.在<td 此处加上width="" 文字居中加上align="center">
+如
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>前端技术阶段划分标准</h3>
+		<table border="1px" cellspacing=0"">
+			<tr>
+				<td width="200px" align="center"></td>
+				<td width="200px" align="center">初级</td>
+				<td width="200px" align="center">中级</td>
+				<td width="200px" align="center">高级</td>
+				<td width="200px" align="center">专家</td>
+				<td>？？？</td>
+			</tr>
+			<tr>
+				<td width="200px" align="center">标准</td>
+				<td width="200px" align="center">0000000</td>
+				<td width="200px" align="center">1111111</td>
+				<td width="200px" align="center">2222222</td>
+				<td width="200px" align="center">3333333</td>
+			</tr>
+			<tr>
+				<td width="200px" align="center">TRAME01</td>
+				<td width="200px" align="center"></td>
+				<td width="200px" align="center"></td>
+				<td width="200px" align="center"></td>
+				<td width="200px" align="center"></td>
+			</tr>
+			<tr>
+				<td width="200px" align="center">TRAME02</td>
+				<td width="200px" align="center"></td>
+				<td width="200px" align="center"></td>
+				<td width="200px" align="center"></td>
+				<td width="200px" align="center"></td>
+			</tr>
+		</table>
+	</body>
+</html>
+
+
+
+2.在<table>后 <tr>前加上<col width="">
+一个<col width="">表示一列的宽度
+如：
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h3>前端技术阶段划分标准</h3>
+		<table border="1px" cellspacing=0"">
+			<col width="200px"><!此处为第一行的宽度改为200px>
+			<col width="200px"><!此处为第二行的宽度改为200px>
+			<col width="200px"><!此处为第三行的宽度改为200px>
+			<col width="200px"><!此处为第四行的宽度改为200px>
+			<tr>
+				<td></td>
+				<td>初级</td>
+				<td>中级</td>
+				<td>高级</td>
+				<td>专家</td>
+				<td>？？？</td>
+			</tr>
+			<tr>
+				<td>标准</td>
+				<td>0000000</td>
+				<td>1111111</td>
+				<td>2222222</td>
+				<td>3333333</td>
+			</tr>
+			<tr>
+				<td>TRAME01</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>TRAME02</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>
