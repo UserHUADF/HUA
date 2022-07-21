@@ -1,1 +1,109 @@
+//web02在昨日2022.7.21丢失，可能是因为没有保存或者网络问题上传失误
+//一下是基于2022.7.21改良之后的粗版
+
+<!这是百度网盘的简略版本>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<img src="img/03.png" width="100%">
+		<p>
+			<a href="one/one.html">
+				<img src="img/04.jpg" width="60px">one
+			</a>
+			<a href="two/two.html">
+				<img src="img/04.jpg" width="60px">two
+			</a>
+		</p>
+		<p>
+		
+		</p>
+		
+	</body>
+</html>
+
+
+
+<!one.html的代码如下>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+			<img src="../img/03.png"width="100%">
+		<p>
+			<a href="../web01.html">
+				<img src="../img/fh.png" width="30px">
+			</a>
+			<a href="../three/three.html">
+			<img src="../img/04.jpg" width="60px">学习资料
+			</a>
+			<a href="../three/three00.html">
+			<img src="../img/04.jpg" width="60px">动漫图片
+			</a>
+		</p>
+		
+	</body>
+</html>
+
+<!two.html的代码如下>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="../img/03.png"width="100%">
+		<p>
+			<a href="../web01.html">
+				<img src="../img/fh.png" width="30px">
+			</a>
+			<img src="../img/05.jpg" width="60px">中国
+			<img src="../img/05.jpg" width="60px">日本
+		</p>
+		
+	</body>
+</html>
+
+<!three.html的代码如下>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="../img/03.png"width="100%">
+		<p>
+			<a href="../one/one.html">
+				<img src="../img/fh.png" width="30px">
+			</a>
+			<img src="../img/05.jpg" width="60px">Chine
+			<img src="../img/05.jpg" width="60px">Japan
+		</p>
+	</body>
+</html>
+
+<!three00.html的代码如下>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="../img/03.png"width="100%">
+		<p>
+			<a href="../one/one.html">
+				<img src="../img/fh.png" width="30px">
+			</a>
+			<img src="../img/1.webp" width="100px">
+	</body>
+</html>
 
