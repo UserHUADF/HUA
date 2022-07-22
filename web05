@@ -1,0 +1,32 @@
+get请求与post请求
+从功能上划分：
+提交数据post  获取数据get
+post请求发送的数据都写在地址栏上，用户可见
+post请求发送的数据用户不可见
+get请求不能提交大量数据，但post可以，因此不要混用
+
+
+在form表单中   <form method="   "> 此处有post和get两种
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="http://127.0.0.1:8848/Test01/web01.html" method="get"><!此处get与post的区别>
+			<p>
+				<input type="text" name="login">
+			</p>
+			<p>
+				<input type="password" name="pass">
+			</p>
+			<p>
+				<input type="submit">
+			</p>
+		</form>
+	</body>
+</html>
+
+
