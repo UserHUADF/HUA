@@ -1,0 +1,29 @@
+<!关于表格的知识点补充>
+关于表头：<th>(文字加粗并居中 即相当于加粗并水平居中的<td>)  </th>
+
+关于colgroup标签 列分组
+用下列标识符来给每一列的所有标签表示宽度 但当列数太多是就要写n多个 、
+此时需要用到列分组来简化
+<col width="100px">
+<col width="100px">
+<col width="100px">
+<col width="100px">
+<col width="100px">
+<col width="100px">
+<col width="100px">
+
+<col width="200px">
+以上代码可以改写成
+<colgroup span="6" width="100px"><!将前六列均设为一组 宽度均为100px>
+<colgroup span="1" width="200px"><!最后一列单独为一组 宽度为200px>
+
+关于<tbody>标签 w3c标准
+写表格的时候最好加上<tbody></tbody>
+
+关于标签嵌套
+超链接不能嵌套超链接
+P标签不能嵌套P标签
+标题标签h1...h6也不能互相嵌套
+
+
+
