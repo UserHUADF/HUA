@@ -1,0 +1,41 @@
+认识css：
+css是用来修饰网页样式的语法（Cascading Style Sheet）叫做层叠样式表
+如果把网页比作一个人，标签和文字只完成了一个基本结构
+Bootstrap
+<td rowspan="4" style="color:red">总体信息</td>更改字体颜色为红色 style里面可以写多个属性用；隔开
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<table width="600px" border="1px" cellspacing="0">
+			<form action="https://www.bilibili.com/">
+				<tbody>
+					<tr height="40" align="center">
+						<td rowspan="4" style="color:red">总体信息</td>
+						<td colspan="2"></td>
+					</tr>
+					<tr height="40">
+						<td align="right">用户名:</td>
+						<td>
+							<input type="text" name="loginname">
+						</td>
+					</tr>
+					<tr height="40">
+						<td align="right">密码:</td>
+						<td>
+							<input type="password" name="pwd">
+						</td>
+					</tr>
+					<tr height="40">
+						<td colspan="2" align="center">
+							<input type="submit" value="提交" style="width: 80px;height: 30px;background-color: darkseagreen;">
+							<input type="reset" value="重置"style="width: 80px;height: 30px;background-color: darkseagreen;">
+						</td>
+					</tr>
+				
+				</tbody>
+			</form>
+		</table>
