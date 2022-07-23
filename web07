@@ -1,0 +1,64 @@
+span 容器标签，不具备任何特殊功能，进当作容器来使用
+用于包裹一段文本，便于给文本增加样式
+<span style="***">***可以是任何形式的文本编辑语言颜色，字体居中等
+
+div 一个通用容器标签，不具备任何特殊功能，仅当作容器来使用。
+可以包裹任何内容，也可以容器直接互相包裹。
+
+text-align:center； 让容器内部元素水平居中
+margin：auto； 让容器本身水平居中 
+如果容器未居中 则因为没有设置容器宽度 容器本身就是居中的 此时需要给容器设置宽度
+（依然是在div中的style中设置宽度）
+margin表示边距 auto表示自动
+
+关于一些用法：
+text-align:center;让内部元素水平居中
+margin:auto;让元素本身水平居中
+background-color:gray;设定背景颜色
+font-size:24px;设定字体大小
+color:white;设定文字颜色
+
+以下为一个洗浴中心的介绍示例
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div style="color:darkslategray;margin:auto;width:500px;">
+			<p style="text-align:center">
+				<span style="background-color:gray; color:white; font-size:24px;">洗浴中心</span>
+			</p>
+			
+				洗浴中心是以提供沐浴服务的休闲场所之一。它集
+				<span style="color:#41A863;">
+					商务、洗浴、客房、棋牌、娱乐、健身、SPA等
+				</span>
+				休闲功能于一体。
+				主要存在于城市和城镇中。
+			</p>
+			<p>
+				洗浴中心是较流行的一种
+				<b>城市休闲方式</b>
+				，以提供沐浴为服务主体的场所。
+				是集商务、洗浴、自助餐、客房、棋牌、娱乐、健身、SPA等休闲功能于一体，
+				在
+				<span style="color: antiquewhite;">
+					硬件设施、装修档次和服务水平
+				</span>
+				等方面也是今非昔比。
+			</p>
+			<p>
+				洗浴中心按综合功能突显某种特点或者说市场营销定位不同来看主要划分为：
+				休闲大浴场、娱乐大浴场、商务会馆、休闲会所、SPA水会、沐浴主题酒店、精品水会。
+				洗浴中心按时尚浴体方式不同分为：
+				<span style="color: bisque;">1
+					桑拿浴、温泉浴、特色浴、冷水浴
+				</span>
+				等。
+			</p>
+		</div>
+	</body>
+</html>
