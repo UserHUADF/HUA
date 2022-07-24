@@ -1,0 +1,16 @@
+//for函数的应用：
+//计算阶乘的和  例如下列为计算1！+2！+3！
+int main()
+{
+
+	int i=1;
+	int n=0;
+	int ret=1;
+	int sum=0;
+	for(n=1;n<=3;n++)
+	{
+			ret=ret*n;
+		  sum=sum+ret;
+	}
+	printf("%d\n",sum);
+}
