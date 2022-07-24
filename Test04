@@ -9,8 +9,9 @@ int main()
 	int sum=0;
 	for(n=1;n<=3;n++)
 	{
-			ret=ret*n;
-		  sum=sum+ret;
+		ret=ret*n;
+		sum=sum+ret;
 	}
 	printf("%d\n",sum);
 }
+
