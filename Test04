@@ -15,3 +15,5 @@ int main()
 	printf("%d\n",sum);
 }
 
+阶乘可以用ret*i(i是顺序变换的数字)表示
+计算多个阶乘的和 用for循环解决
