@@ -1,1 +1,131 @@
 样式表的层叠
+在实际的网页开发中 作用于同一个元素上的多个样式产生冲突的情况 不可避免的经常发生
+当多个样式发生重叠时 优先级高的样式会生效
+
+
+示例：实现分割线 两种方法 直接加上竖线/只留下方框的右边的线
+ 
+ 以下为第一种方式：
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#navigation{
+				text-align: center;
+			}
+			.item{
+				text-decoration:none;
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="navigation">
+			<a href="#" class="item">首页</a>
+			<span>|</span>
+			<a href="#" class="item">办公家居</a>
+			<span>|</span>
+			<a href="#" class="item">数码科技</a>
+			<span>|</span>
+			<a href="#" class="item">母婴</a>
+			<span>|</span>
+			<a href="#" class="item">团购</a>
+			<span>|</span>
+			<a href="#" class="item">秒杀活动</a>
+		</div>
+	</body>
+</html>
+此种方式的问题也很明显，看起来复杂 只能通过对每一个分割线添加修饰来改变样式
+
+
+
+
+第二种方式：
+<!边框 添加样式 样式有 三种border:solid/dashed/dotted>
+                                 ————  -----  .....
+此处使用的是第一种solid
+在.item{}内添加以下元素
+border:solid 1px #808080;   分别是边框样式 宽度 颜色
+
+然后将边框拉长至合并此处用到padding
+padding 0 15px；
+ 
+只保留右边框对上述border：
+border-right:solid 1px #808080;
+但是用这种方法会导致最后出现多余的分割线 此处可以利用样式优先级 
+即行内样式表优先级>内部样式表
+
+如下：
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#navigation{
+				text-align: center;
+			}
+			.item{
+				text-decoration:none;
+				color: black;
+				border-right:solid 1px #808080;
+				padding: 0 10px;
+				
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="navigation">
+			<a href="#" class="item">首页</a>
+			<a href="#" class="item">办公家居</a>
+			<a href="#" class="item">数码科技</a>
+			<a href="#" class="item">母婴</a>
+			<a href="#" class="item">团购</a>
+			<a href="#" class="item" style="border:none">秒杀活动</a>
+		</div>
+	</body>
+</html>
+
+此处还有一种方式改变最后一个分割线
+即再增加一个样式表
+<a href="#" class="item last"
+
+如下：
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#navigation{
+				text-align: center;
+			}
+			#navigation .last{
+				border:none;
+			}
+			.item{
+				text-decoration:none;
+				color: black;
+				border-right:solid 1px #808080;
+				padding: 0 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="navigation">
+			<a href="#" class="item">首页</a>
+			<a href="#" class="item">办公家居</a>
+			<a href="#" class="item">数码科技</a>
+			<a href="#" class="item">母婴</a>
+			<a href="#" class="item">团购</a>
+			<a href="#" class="item last">秒杀活动</a>
+		</div>
+	</body>
+</html>
+
+即#navigation .last{}的优先级>.item的优先级
+
+
