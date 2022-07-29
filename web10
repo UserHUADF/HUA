@@ -1,0 +1,53 @@
+CSS优先级的判断 CSS选择器的权重计算
+
+如以下示例：
+    行内样式      >   ID选择器  >  类别选择器  >  标签选择器  >  通用选择器
+<...style="...">     #box{...}     .con{...}     div{...}      *{...}
+但是有时候CSS过于复杂可能会有冲突 谁的权重值高 谁的优先级高
+
+通用选择器 *                       权重值为0
+标签（元素）选择器 div  p...       权重值为1
+类别选择器 .act .nav...           权重值为10
+ID选择器 #btn #box...             权重值为100
+行内样式                          权重值为1000
+
+例如： #box p .tt 
+       100  1  10加起来 权重值为111 优先级比下面的高
+       #box .tt
+       100   10加起来为110
+规律：选择器选择的范围越小 越精确 权重越大 优先级就越高
+
+
+以下帮助判断CSS优先级
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#p1{
+				color: blue;
+			}
+			*{
+				color: orange;
+			}
+			.pp{
+				color: green;
+			}
+			p{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="pp" id="p1" style="color:slateblue">
+			猜猜老子什么颜色啊？
+		</p>
+	</body>
+</html>
+答案是slateblue
+去掉行内样式 style="color:slateblue" 颜色变为蓝色blue 即id选择器 #p1{}生效了
+再次去掉id样式#p1{} 颜色变为绿色green 即类别样式 .pp{}生效了
+再次去掉类别样式.pp{} 颜色变为红色 即标签选择器 p{}生效了
+再次去掉标签选择器p{} 颜色变为橘色orange 即通用选择器生效了
+
