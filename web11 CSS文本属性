@@ -1,1 +1,53 @@
 颜色 字体 行高 大小 加粗 倾斜 首行缩进 水平对齐 文字修饰
+
+			.p1{color:red;}/*文字颜色*/
+			.p2{font-family: "华文中宋";}/*文字类型*/
+			.p3{font-size: 26px;}/*文字大小*/
+			.p4{font-weight: bold;}/*文字加粗*/
+			.p5{font-size:italic;}/*文字倾斜*/
+			.p6{text-indent:60px}/*首行缩进*/
+			.p7{text-align: center;}/*水平对齐方式*/
+			.p8{line-height: 100px;}/*行高*/
+			.p9{height: 100px;background-color: gray;line-height: 100px;}/*文字居中显示*/
+			.p10{text-decoration: underline;}/*文字修饰：添加下划线*/
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style tylie="text/css">
+			body{
+				margin:0
+			}
+			.p1{color:red;}/*文字颜色*/
+			.p2{font-family: "华文中宋";}/*文字类型*/
+			.p3{font-size: 26px;}/*文字大小*/
+			.p4{font-weight: bold;}/*文字加粗*/
+			.p5{font-size:italic;}/*文字倾斜*/
+			.p6{text-indent:60px}/*首行缩进*/
+			.p7{text-align: center;}/*水平对齐方式*/
+			.p8{line-height: 100px;}/*行高*/
+			.p9{height: 100px;background-color: gray;line-height: 100px;}/*文字居中显示*/
+			.p10{text-decoration: underline;}/*文字修饰：添加下划线*/
+		</style>
+	</head>
+	<body>
+		<img src="img/s.1.jpg" width="100%">
+		<ul>
+			<li class="p1">经过华为工程师的不懈努力，</li>>
+			<li class="p2">备受期待的华为HarmonyOS 3.0系统终于在7月27日晚上的发布会上正式亮相，</li>
+			<li class="p3">传闻已久的神秘面纱终于揭开了。除了鸿蒙系统之外，</li>
+			<li class="p4">本次发布会上还发布了华为MatePad Pro、华为MateBook X Pro、</li>>
+			<li class="p5">华为FreeBuds Pro 2、华为智慧屏S86 Pro、</li>
+			<li class="p6">华为智慧屏S系列、全新华为WATCH 3 Pro new、</li>
+			<li class="p7">华为PixLab V1打印机、华为MateBook 14s、</li>
+			<li class="p8">华为S-TAG和华为WATCH FIT mini等多款全场景应用的智能设备。</li>
+			<li class="p9">HarmonyOS 3 新风貌，全面进化。现在，更多设备加入超级终端，实现自由连接。</li>
+			<li class="p10">随心组合的协同，让你多方位高效协作；操作自如的卡片服务，助你轻松直达目的；</li></li>
+		</ul>
+
+	</body>
+</html>
