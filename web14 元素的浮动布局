@@ -1,0 +1,69 @@
+元素浮动的特点：
+在页面上一个div覆盖另外一个div 但是不会覆盖文字
+即浮动元素会脱离文档 与其他元素发生重叠 但是不会与文字内容发生重叠
+比如：文字环绕效果
+
+使用<div class="**">标签赋予该div **标签
+在<style>中添加float属性  float属性使用后该div将不再占用空间
+float:left或者right为浮动的方向 靠左 靠右 
+		<style type="text/css">
+			.green{
+				width: 100px;height: 100px;
+				background-color: green;
+				float: left;
+			}
+			.red{
+				width: 200px;height: 150px;
+				background-color: red;
+			}
+			
+		</style>
+    
+    
+    实现div的横向排布：如下令数个div浮动靠左排布即可实现横向排布
+    
+    <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.green{
+				width: 100px;height: 100px;
+				background-color: lightblue;
+				float: left;
+			}
+			.red{
+				width: 200px;height: 150px;
+				background-color: lightcoral;
+			}
+			.a{
+				width: 200px;height: 150px;
+				background: lightblue;
+			}
+			.b{
+				width: 400px;height: 150px;
+				background: lightpink;
+			}
+			.c{
+				width: 200px;height: 150px;
+				background: lightseagreen;
+			}
+			.a,.b,.c{
+				float: left;height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<p>文字环绕效果</p>
+		<div class="green"></div>
+		<div class="red">随心组合的协同，让你多方位高效协作；
+		操作自如的卡片服务，助你轻松直达目的</div>
+		<p> 横向排版布局</p>
+		<div class="a"></div>
+		<div class="b"></div>
+		<div class="c"></div>
+		<div class="d"></div>
+		
+	</body>
+</html>
