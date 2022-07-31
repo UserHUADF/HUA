@@ -1,0 +1,45 @@
+div容器大小会限制图片的显示
+元素宽高的百分比 是相对于父元素而言的 
+若父元素高度为0 则子元素的高度即使设置为100% 大小也是0
+html元素大小是相对于浏览器窗口而言的
+
+
+图片被设置为背景图片时会被平铺在背景上 
+此时使用background-repeat: no-repeat;取消重复平铺
+		<style type="text/css">
+			html,body{
+			margin:0;
+			height:100%;
+			}
+			body{
+				background-image: url(imgs/2015051820342024817.gif);
+				background-repeat: no-repeat;
+			}
+      </style>
+      
+图片位置设置：例如居中显示使用background-position:center center；
+此处两个center分别是水平与垂直方向上的位置（right bottom top）
+
+
+
+以下为一个示例：
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			html,body{
+			margin:0;
+			height:100%;
+			}
+			body{
+				background-image: url(imgs/2015051820342024817.gif);
+				background-repeat: no-repeat;
+				background-position: center top;
+			}
+		</style>
+	</head>
+	<body>
+	</body>
+</html>
