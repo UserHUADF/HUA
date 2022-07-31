@@ -1,0 +1,51 @@
+对于普通的不服懂的元素 div会将父元素“撑开” 即占用的宽高会影响到父元素
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.a{
+				width: 20%;
+				background: lightblue;
+			}
+			.b{
+				width: 60%;
+				background: lightgoldenrodyellow;
+			}
+			.c{
+				width: 20%;
+				background: lightpink;
+			}
+			.a,.b,.c{
+				float: left;
+				height: 200px;
+			}
+			.hh{
+				height: 300px;
+				background-color: lightseagreen;21
+			}
+			.outer{
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="outer">
+			<div class="a"></div>
+			<div class="b"></div>
+			<div class="c"></div>
+		</div>
+		<div class="hh"></div>
+	</body>
+但是浮动元素不占空间 此时父元素也不占用空间 这时需要给父元素设置高度
+即上面的
+			.outer{
+				height: 200px;
+			}
+针对父元素的高度 如果不想父元素收到浮动元素的影响可以使用overflow:auto;
+此时父元素的高度会自动调整
+
+
+
+还有一种方式 使用clear标签
+即clear:left/right/both（此元素不受到（其他元素的）左/右/都浮动的影响）
+
