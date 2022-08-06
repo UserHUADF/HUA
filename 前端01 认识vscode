@@ -5,3 +5,37 @@ border:边框
 更改中文语言
 基础骨架:与HbuliderX相似
 文件夹下dos   code   英文状态下的.html
+表格
+<table border="边框宽度" cellspacing="单边框效果（过时了）" width="宽度" height="高度">
+           <tr>一行
+                <td>一个单元格</td>
+           </tr>
+</table>
+
+
+
+
+文本框
+<input type="text" name="firstname">
+
+
+密码框
+<input type="password" name="pwd">
+
+
+单选按钮
+<form>
+          <input type="radio" name="sex" value="male">Male
+          <input type="radio" name="sex" value="female">Female
+</form>
+
+
+复选框
+<form>
+          <input type="checkbox" name="vehicle" value="Bike">I have a bike
+          <input type="checkbox" name="vehicle" value="Car">I have a car
+</form>
+
+
+文件
+<input type="file" name="file">
