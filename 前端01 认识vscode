@@ -5,6 +5,7 @@ border:边框
 更改中文语言
 基础骨架:与HbuliderX相似
 文件夹下dos   code   英文状态下的.html
+此处因网络问题丢失信息
 表格
 <table border="边框宽度" cellspacing="单边框效果（过时了）" width="宽度" height="高度">
            <tr>一行
