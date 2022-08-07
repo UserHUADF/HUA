@@ -26,17 +26,23 @@ border:边框
 
 单选按钮
 <form>
-          <input type="radio" name="sex" value="male">Male
-          <input type="radio" name="sex" value="female">Female
+     <input type="radio" name="sex" value="male">Male
+     <input type="radio" name="sex" value="female">Female
 </form>
 
 
 复选框
 <form>
-          <input type="checkbox" name="vehicle" value="Bike">I have a bike
-          <input type="checkbox" name="vehicle" value="Car">I have a car
+     <input type="checkbox" name="vehicle" value="Bike">I have a bike
+     <input type="checkbox" name="vehicle" value="Car">I have a car
 </form>
 
 
 文件
 <input type="file" name="file">
+
+label标签
+为input元素定义标注（标记）
+label元素不会向用户呈现任何特殊效果 不过为鼠标用户改进了可用性 如果在label元素内部点击文本 就会触发此控件 
+就是说 当用户选择该标注时 浏览器会自动将焦点转到和标签相关的表单控件上
+提示：for属性可把label绑定到另外一个元素 请把for属性的值设置为相关元素的id属性的值
