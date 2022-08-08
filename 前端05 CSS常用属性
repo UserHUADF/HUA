@@ -9,11 +9,29 @@
 字体属性：
 字体颜色color
 字体大小font-size
-字体粗细font-weight
-字体样式font-family
+字体粗细font-weight 在100-900或者bold定义粗体
+字体样式font-family underline下划线 overline上划线 linethrough穿过文本
 
 文本属性：
 对齐方式text-algin
 修饰text-decoration
 文本大小写transform
-列表属性list-style
+
+列表属性：
+列表项标记的类型list-style-type none disc circle square
+ul.a{***}
+ul.b{***}
+
+
+
+    <style>
+        div{
+            width: 100%;
+            height: 800px;
+            background-image: url(../code/imgs/屏幕截图\ 2022-08-07\ 225914.jpg);
+            background-repeat:no-repeat;
+            background-size: 10% 10%;/* 此处表示X轴与Y轴的大小 */
+            background-position: right top;/*left right top bottom center六个元素组合如此处为右上 还可以用百分比来表示*/
+        }
+    </style>
+    以上属性可以用复合属性表示：即background:url("***") no-repeat center/cover;(建议把size分开来写)
