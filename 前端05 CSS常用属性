@@ -1,10 +1,10 @@
 背景属性：
-设置背景颜色
-设置背景图片
-设置图片重复方式
-设置图片位置
-设置图片大小
-复合属性
+设置背景颜色background-color
+设置背景图片background-image
+设置图片重复方式background-repeat
+设置图片位置background-position
+设置图片大小background-size
+复合属性background
 
 字体属性：
 字体颜色color
