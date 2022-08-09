@@ -41,3 +41,30 @@ class属性的特点：
 <h3 class="classsone classtwo">hello</h3>
 
 
+
+ID标签 相同的的id只能用一次 如果多次使用 即不符合规范 不能出现多个相同id 一般用在比较大的容器上
+
+
+
+关系选择器：
+1.后代选择器
+E F{}选择所有被E元素包含的F元素 中间用空格隔开
+如<ul>
+         <li>BMW</li>
+         <li>BMW</li>
+<ol>
+       <li>Audi</li>
+       <li>BMW</li>
+</ol>
+此处使用ul li{color:green}
+
+2.子代选择器
+E>F{}选择所有作为E元素的直接子元素F，对更深一层的元素不起作用 用>表示
+
+重复选择器 
+选择器1,选择器2,选择器3......{}
+提取共同的样式 减少重复代码
+例如：
+.header,.footer,{
+      height:300px;
+      }
