@@ -1,0 +1,10 @@
+CSS盒模型本质上就是一个盒子 封装周围的HTML元素 包括边距(margin) 边框(border) 填充(padding) 实际内容(context)
+
+实际内容(context)区域包含宽度与高度两个属性
+ 默认高度有内容撑开
+ 
+ 内边距
+ CSS padding（填充）定义元素边框与元素内容之间的控件 即上下左右的内边距
+ padding元素有上下左右的选择 如padding-top上边距 padding-right右边距
+ 为了缩短代码 可以在一个属性中指定所有填充属性 也就是简写属性 例如：
+ padding 25px 50px 75px 100px 代表上填充25px 右填充50px 下填充75px 左填充100px
