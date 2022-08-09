@@ -8,3 +8,22 @@ CSS盒模型本质上就是一个盒子 封装周围的HTML元素 包括边距(m
  padding元素有上下左右的选择 如padding-top上边距 padding-right右边距
  为了缩短代码 可以在一个属性中指定所有填充属性 也就是简写属性 例如：
  padding 25px 50px 75px 100px 代表上填充25px 右填充50px 下填充75px 左填充100px
+
+
+display属性
+display:flex 开启弹性盒 属性设置后子元素默认水平排列
+flex-direction属性 指定了弹性子元素在父容器中的位置
+flex-direction取值：
+  1.row：横向从左到右排列（左对齐） 默认的排列方式
+  2.column：纵向排列
+justify-content属性
+内容对齐（justify-content）属性应用在弹性容器上 把弹性项沿着弹性容器的主轴线
+常用值为center left right
+align-i
+属性
+align-items设置或者检索弹性盒子在侧轴（纵轴）方向上的对齐方式
+常用值为center中 flex-start上 flex-end下
+
+FLEX
+根据弹性盒子元素所这只的扩展音质作为比率来分配剩余空间（权重）
+
