@@ -22,3 +22,32 @@ int main()
 在一个有序数组中查找具体的某个数字n 编写int binsearch(int x,int v[],int n)
 功能：在v[0]<=v[1]<=v[2]<=....<=v[n-1]的数组中查找x
 
+注：此处有个元素个数计算公式sz
+int sz=sizeof(arr)/sizeof(arr[0]);//元素个数
+
+以下为在一个数组中中找到7这个数 并显示其下标
+#include<stdio.h>
+
+int main()
+{
+	int arr[]={1,2,3,4,5,6,7,8,9,10,};
+	int k=7;
+	//写一个代码 在arr数组中(有序)找到7
+	int i=0;
+	int sz=sizeof(arr)/sizeof(arr[0]); //这里是计算arr中元素个数
+	for(i=0;i<sz;i++)
+	{
+		if(k == arr[i])  //这里是设置条件 即在arr中找到了7这个数
+		{
+		
+			printf("找到了 下标是：%d\n",i);
+			break;
+		}
+	}
+	if(i == sz)  //此时i等于sz 此时已经不属于arr数组了 即找全了所有arr中的数字 均不满足等于7
+
+		printf("找不到\n");
+	return 0;
+}
+
+
