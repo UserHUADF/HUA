@@ -87,5 +87,23 @@ int main()
 
 //**编写代码 演示多个字符向两端移动 向中间汇聚
 P8 7.分支和循环（2）
+#include<stdio.h>
 
+
+int main()
+{
+	char arr1[]="welcome to bilibi!!!!";//此处内容与之前不同 char arr[]中间的内容为字符 最后一位是\0
+	char arr2[]="#####################";
+	//int right=strlen(arr1)-1;//这个时候没有\0
+	int right=sizeof(arr1)/sizeof(arr1[0])-2;//此处-2才是最后一个！
+	int left=0;
+	while(left<=right)
+	{
+		arr2[left]=arr1[left];
+		arr2[right]=arr1[right];
+		printf("%s\n",arr2);
+		left++;
+		right--;
+	}
+}
 
