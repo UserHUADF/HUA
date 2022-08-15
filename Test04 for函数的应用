@@ -124,7 +124,7 @@ int main()
 	{
 		printf("请输入密码:>");
 		scanf("%s",password);
-		if(strcmp(password,"123456")==0)//此处不用password==123456 不能用==比较两个字符串是否相等
+		if(strcmp(password,"123456")==0)//此处不用password==123456 不能用==比较两个字符串是否相等 此处的strcmp为库函数
 		{
 			printf("登录成功\n");
 			break;
