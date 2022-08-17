@@ -134,4 +134,4 @@ int main()
 	printf("三次密码均错误，退出程序\n");
 	return 0;
 }
-
+if与for函数的应用
