@@ -14,6 +14,9 @@ int main()
 		printf("%d\n",sum);
 	return 0;
 }
+初始的C语言中是没有某些函数的如printf
+后来版本的C语言将某些常用的功能加入函数如输入 输出（库函数）
+可以在cplusplus.com 中查咋库函数
 
 
 
