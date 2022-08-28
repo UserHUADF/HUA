@@ -1,0 +1,19 @@
+//函数是相对独立的“子程序”
+//例如以下一段代码 Add就是一个函数
+int Add(int x,int y)
+{
+	int z=0;
+	z=x+y;
+	return z;
+}
+int main()
+{
+	int a,b,sum;
+	scanf("%d%d",&a,&b);
+	sum=Add(a,b);
+		printf("%d\n",sum);
+	return 0;
+}
+
+
+
