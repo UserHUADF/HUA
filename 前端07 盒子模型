@@ -1,5 +1,10 @@
 CSS盒模型本质上就是一个盒子 封装周围的HTML元素 包括边距(margin) 边框(border) 填充(padding) 实际内容(context)
 
+CSS盒子模型有标准盒子模型和弹性盒子模型两块
+标准盒子模型：即内容 内边距 变框 外边距
+弹性盒子模型：即父元素上的属性：display flex-direction justify-content justify-content
+               子元素上的属性：flex
+
 实际内容(context)区域包含宽度与高度两个属性
  默认高度有内容撑开
  
