@@ -1,1 +1,107 @@
+此处实战 遇到问题
+在定义了类选择器.img1-.img9后
+.img1生效
+但是.img2-.img9失效 原因不清楚
+本次实战（失败）
+照片墙的组成是由一个div容器装载图片 对每张图片使用transform属性旋转并设置top与left属性
 
+以下为部分代码
+
+正文部分
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <img class="img1" src="imgs/1.jpeg" alt="小吉祥草王">
+        <img calss="img2" src="imgs/2.jpeg" alt="小吉祥草王">
+        <img calss="img3" src="imgs/3.jpeg" alt="小吉祥草王">
+        <img calss="img4" src="imgs/8.jpeg" alt="小吉祥草王">
+        <img calss="img5" src="imgs/5.jpeg" alt="小吉祥草王">
+        <img calss="img6" src="imgs/6.png" alt="小吉祥草王">
+        <img calss="img7" src="imgs/7.jpeg" alt="小吉祥草王">
+
+    </div>
+</body>
+</html>
+
+
+CSS样式表部分
+
+.container{
+    width: 960px;
+    height: 600px;
+    background-color: aqua;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.container img{
+    width: 10%;
+    border: 10px solid #f1f1f1;
+    position:absolute;
+}
+
+
+
+.img1
+{
+
+    transform: rotate(10deg);
+    top: 0;
+    left: 370px;
+}
+
+.img2
+{
+
+    transform: rotate(10deg);
+    top: 0;
+    left: 470px;
+}
+
+
+
+
+.img3
+{
+    transform: rotate(20deg);
+    top: 0;
+    left: 600px;
+}
+
+
+.img4
+{
+    transform: rotate(104deg);
+    top: 40px;;
+    left: 570px;
+}
+
+
+
+.img5
+{
+    transform: rotate(10deg);
+    top: 0;
+    left: 570px;
+}
+
+
+.img6
+{
+    transform: rotate(10deg);
+    top: 0;
+    left: 570px;
+}
+/*
+    css3提供的transform 取值：rotate（deg）
+    transform：rotate（10deg）正顺负逆
+*/
