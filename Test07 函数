@@ -26,4 +26,15 @@ IO函数
 数字函数
 其他库函数
 
-strcpy
+strcpy拷贝数组函数 用法：（目标，源头）
+#include<stdio.h>
+
+#include<string.h>
+int main()
+{
+	char arr1[]="bit";
+	char arr2[20]="#####";
+	strcpy(arr2,arr1);//拷贝arr1的内容到arr2里面
+	printf("%s\n",arr2);
+}
+	
