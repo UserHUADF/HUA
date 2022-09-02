@@ -1,4 +1,4 @@
-响应式设计是一种网站页面设计布局 可以智能的根据用户行为以及实用的设备环境进行相对应的布局
+ 响应式设计是一种网站页面设计布局 可以智能的根据用户行为以及实用的设备环境进行相对应的布局
 学习内容：
 1.CSS媒体查询
 2.利用BootStrap实现响应式设计
@@ -9,4 +9,11 @@
  1.兼容各种设备工作量大 效率低下
  2.代码累赘 会出现隐藏无用的元素 加载时间长
  设置meta标签
+ 
+大多数移动浏览器将HTML页面放大为宽的视图 以符合屏幕分辨率 你可以使用视图的meta标签来进行重置 下面的标签告诉浏览器 使用设备的宽度作为视图宽度并禁止初始的缩放
+在<head>标签里加入这个meta标签
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum=scale=1,user-sacalble=no">
+参数解释：
+width = device-width 宽度等于当前设备的宽度
+initial-scale初始的缩放比例
  
