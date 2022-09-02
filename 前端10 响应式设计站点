@@ -11,9 +11,24 @@
  设置meta标签
  
 大多数移动浏览器将HTML页面放大为宽的视图 以符合屏幕分辨率 你可以使用视图的meta标签来进行重置 下面的标签告诉浏览器 使用设备的宽度作为视图宽度并禁止初始的缩放
-在<head>标签里加入这个meta标签
+在<head>标签里加入这个meta标签（如果不加的话在手机上显示画面会等比例缩小 看不清内容）
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum=scale=1,user-sacalble=no">
 参数解释：
 width = device-width 宽度等于当前设备的宽度
-initial-scale初始的缩放比例
+initial-scale初始的缩放比例（默认值为1.0）
+maximum-scale允许用户缩放到最大比例（默认设置为1.0）
+user-scalable用户是否可以手动缩放（默认值为no 因为我们不希望用户放大缩小）
+通过媒介查询来设置Media Queries
+Media Queries是响应式设计的核心
+Media Queries能在不同的条件下使用不同的样式，使页面在不同的终端设备下达到不同的渲染效果
+@media screen and (max-width:768px) {
+ body{
+     background-color:red;
+     }
+}
+@media screen and (max-width:992px) and (min-width:768px) {
+ body{
+     background-color:pink;
+     }
+}
  
