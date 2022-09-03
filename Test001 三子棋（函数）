@@ -49,6 +49,59 @@ void DisplayBoard(char board[ROW][COL],int row,int col)
   //用这种方式可以打印N子棋的棋盘
   
   
+  //玩家下棋
+  void PlayerMove(char board[][COL],int row,int col)
+{
+	int x=0;
+	int y=0;
+	printf("玩家走:>\n");
+
+	while(1)
+	{
+		printf("请输入下棋的坐标:>");
+		scanf("%d %d",&x,&y);
+		//判断坐标合法性
+		if(x>=1 && x<=row && y>=1 && y<=col)
+		{
+			//下棋
+			//判断坐标是否被占用
+			if(board[x-1][y-1] == ' ')
+			{
+				board[x-1][y-1] = '*';
+				break;
+			}
+			else
+			{
+				printf("坐标被占用，请重新输入\n");
+			}
+		}
+		else
+		{
+			printf("坐标非法，请重新输入\n");
+		}
+
+	}
+}
+  
+  
+  //电脑下棋：
+  void ComputerMove(char board[][COL],int row,int col)
+{
+	printf("电脑走:>\n");
+
+	while(1)
+	{
+		int x = rand()%row;
+		int y = rand()%col;
+		//判断占用
+		if(board[x][y] == ' ')
+		{
+			board[x][y]='#';
+			break;
+		}
+	}
+}
+  
  在游戏进行的过程中
  1.玩家赢了-*
  2.电脑赢了-#
