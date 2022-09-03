@@ -49,4 +49,11 @@ void DisplayBoard(char board[ROW][COL],int row,int col)
   //用这种方式可以打印N子棋的棋盘
   
   
-  
+ 在游戏进行的过程中
+ 1.玩家赢了-*
+ 2.电脑赢了-#
+ 3.平局    -Q
+ 4.游戏继续-C
+ 
+ 利用IsWin函数来判断游戏状态(返回char字型)
+ 
