@@ -6,3 +6,47 @@
 
 
 //以下为详细的函数构成
+棋盘初始化：
+void DisplayBoard(char board[ROW][COL],int row,int col)
+{
+	int i=0;
+	for(i=0;i<row;i++)
+	{
+		printf(" %c | %c | %c \n",board[i][0],board[i][1],board[i][2]);
+		if(i<row-1)
+		printf("---|---|---\n");
+	}
+
+}
+//此种方式在更改棋盘布局时不方便无法打印大于3*3的棋盘格局 所以此处我们使用函数嵌套的方式打印棋盘
+//如下：
+	int i=0;
+	for(i=0;i<row;i++)
+	{
+		int j=0;
+		for(j = 0;j < col;j++)
+		{
+			printf(" %c ",board[i][j]);
+			if(j<col-1)
+			printf("|");
+		}
+		printf("\n");
+		//printf(" %c | %c | %c \n",board[i][0],board[i][1],board[i][2]);
+		if(i<row-1)
+		//printf("---|---|---\n");
+		{
+			int j=0;
+			for(j=0;j<col;j++)
+			{
+				printf("---");
+				if(j<col-1)
+					printf("|");
+
+			}
+      	printf("\n");
+		}
+	}
+  //用这种方式可以打印N子棋的棋盘
+  
+  
+  
