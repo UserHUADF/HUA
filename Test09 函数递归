@@ -64,3 +64,49 @@ int main ()
 //这个网站相当于程序员的知乎！
 
 
+
+//练习二
+//编写函数 不允许创建临时变量 求字符串长度
+#include<string.h>
+
+int my_strlen(char* str)//此处arr传给my_strlen的是指针的地址
+{
+	int count=0;//此时创建了一个count临时变量 但是题目要求不允许创建临时变量
+	while(*str != '\0')
+	{
+		count++;
+		str++;
+	}
+	return count;
+}
+
+
+int main()
+{
+	char arr[]="bit";
+	//['b']['i']['t']['\0']
+	//模拟实现一个strlen函数
+	printf("%d\n",my_strlen(arr));//此处原来是用strlen（arr）
+
+	return 0;
+}
+
+//于是改为：
+int my_strlen(char* str)
+{
+	//利用递归 将题目变成1+1+1+my_strlen('\0')
+	if(*str != '\0')
+		return 1+my_strlen(str+1);
+	else
+		return 0;
+}
+
+int main()
+{
+	char arr[]="bit";
+	//['b']['i']['t']['\0']
+	//模拟实现一个strlen函数
+	printf("%d\n",my_strlen(arr));//此处原来是用strlen（arr）
+
+	return 0;
+}
