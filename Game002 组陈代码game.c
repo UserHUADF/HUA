@@ -1,3 +1,4 @@
+//此为程序代码实现模块 编写实现不同功能的函数
 #include"game.h"
 
 void InitBoard(char board[ROWS][COLS],int rows,int cols,char set)
