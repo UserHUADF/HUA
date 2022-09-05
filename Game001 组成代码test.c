@@ -1,3 +1,4 @@
+//此为主程序 运行测试主体
 #include<stdio.h>
 #include"game.h"//这里是引用了头文件game.h
 
