@@ -1,4 +1,4 @@
-
+//此为定义的头文件
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
