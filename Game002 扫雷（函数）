@@ -8,5 +8,75 @@
 //所以在周围多设置一排数组 以至于不会越界
 //创建11*11的棋盘
 //按照game.c game.h test.c 的分布来设计游戏
-//
-//
+
+//此处应用自定义头文件
+#include"game.h"
+
+
+//首先在test.c中设置menu函数作为菜单
+void menu()
+{
+	printf("\n");
+	printf("*****************************************\n");
+	printf("**************    1.play    *************\n");
+	printf("**************    0.exit    *************\n");
+	printf("*****************************************\n");
+	printf("\n");
+}
+
+
+//游戏函数void game ：
+//1.定义并初始化函数：
+	char mine[ROWS][COLS] = {0};//存放布置好的雷的信息 初始化全为0
+	char show[ROWS][COLS] = {0};//存放排查出的雷的信息 初始化全为*
+	//初始化棋盘
+	InitBoard(mine,ROWS,COLS,'0');
+	InitBoard(show,ROWS,COLS,'*');
+  
+//2.打印棋盘： 
+  DisPlayBoard(mine,ROW,COL);//此处是调试棋盘 在调试完成之后需要将其屏蔽
+	DisPlayBoard(show,ROW,COL);
+  
+//3.布置雷：
+  SetMine(mine,ROW,COL);
+	/*DisPlayBoard(mine,ROW,COL);*///此处是调试棋盘 在调试完成之后需要将其屏蔽
+  
+//4.排查雷：
+	FindMine(mine,show,ROW,COL);//排查出雷放在show数组中
+  
+
+//主函数：
+int main()
+{
+	int input=0;//在函数开头定义input 下文要使用scanf函数得到玩家输入的值
+	srand((unsigned int)time(NULL));//这里引用srand函数 因为在game.c中使用了rand函数
+  //用rand函数之前要调用sran函数 此处必不可少 此处强制转换了类型为int型 为了不报警告
+  
+	do  //do while函数确保在开始运行菜单函数 跳出switch循环 可以再次选择开始游戏
+	{
+		menu();
+		printf("请选择:>");
+		scanf("%d",&input);
+		switch(input)
+		{
+		case 1:
+			game();
+			//printf("\n");
+			//printf("扫雷\n");
+			break;
+		case 0:
+			printf("\n");
+			printf("退出游戏\n");
+			break;
+		default:
+			printf("\n");
+			printf("选择错误，重新选择\n");
+			break;
+		}
+	}
+	while(input);
+	return 0;
+}
+  
+  
+  
