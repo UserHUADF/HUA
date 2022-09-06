@@ -144,7 +144,7 @@ void FindMine(char mine[ROWS][COLS],char show[ROWS][COLS],int row,int col)
 				{
 					//优化
 					OUT_MINE(mine,show,row,col,x,y);
-					win=win+9;
+					win++;//此处有问题 如果改用win=win+8 在已经探明的非雷附近探雷会导致程序提前结束 但此处会导致已经探明所有雷 程序却没有结束
 				}
 				else
 				{
