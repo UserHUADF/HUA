@@ -2,7 +2,6 @@
 
 #include"game.h"
 
-
 void menu()//菜单界面
 {
 	printf("************************\n");
@@ -46,7 +45,6 @@ void game()
 		PrintPlayer(PlayerMine, ROW, COL);   //既没有踩到雷，也没有排除所有雷，所以打印玩家棋盘继续排雷
 	}
 }
-
 
 int main()
 {
