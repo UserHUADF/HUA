@@ -7,3 +7,13 @@
 //    char*p;p+1-->1
 //    double*p;p+1-->8个字节
 //野指针没对象
+
+#include <stdio.h>
+int main()
+{
+  int num = 10;
+  int *p = &num;//取出num的地址放在*p中
+  *p = 20;//将*p内存储的数改为20 此时num=20
+  //解引用操作 | *pa就是通过pa里面的地址 找到a
+  return 0;
+}
